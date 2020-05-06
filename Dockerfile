@@ -6,7 +6,7 @@ LABEL	version="2.0 (released 2020-03-18)"
 
 ENV	 PATH=/usr/local/bin:$PATH
 
-RUN	apt update && apt upgrade \
+RUN	apt update && apt -y upgrade \
 	&& apt install -y build-essential wget gnuplot
 
 RUN	LC_ALL="C.UTF-8"
