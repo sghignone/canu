@@ -16,10 +16,10 @@ RUN	LANG="C.UTF-8"
 ENV	TAG="2.2"
 ENV	URL="https://github.com/marbl/canu/releases/download/v${TAG}/canu-${TAG}.Linux-amd64.tar.xz"
 RUN	wget -c "$URL" -O - | tar -xJf -
-RUN	cd "canu-${TAG}/Linux-amd64" || exit 1
+RUN	cd "canu-${TAG}" || exit 1
 
-RUN	cp -a canu-${TAG}/Linux-amd64/bin/* /usr/local/bin/
-RUN	cp -a canu-${TAG}/Linux-amd64/lib/* /usr/local/lib/
-RUN	cp -a canu-${TAG}/Linux-amd64/share/* /usr/local/share/
+RUN	cp -a canu-${TAG}/bin/* /usr/local/bin/
+RUN	cp -a canu-${TAG}/lib/* /usr/local/lib/
+RUN	cp -a canu-${TAG}/share/* /usr/local/share/
 
 WORKDIR	/scratch
